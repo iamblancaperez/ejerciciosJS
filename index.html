@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Ejercicios de JS</title>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<!--div class="container">
+		<div class="row">
+			<div class="col-md-12" id="caja">
+				<h1 class="text-center">
+					Navegando el DOM con JS
+				</h1>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4">
+				<article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam asperiores et, molestiae animi dolores vitae. Pariatur reiciendis architecto molestiae iusto fugit ducimus laboriosam soluta, mollitia harum, nesciunt deserunt atque accusamus.</article>
+			</div>
+			<div class="col-md-4">
+				<article>Neque, perferendis illo obcaecati corrupti voluptatibus soluta a, explicabo suscipit necessitatibus aliquid tenetur ullam autem commodi eius in error corporis qui ea facere voluptas, beatae expedita nisi. Dolore, sit, reiciendis.</article>
+			</div>
+			<div class="col-md-4">
+				<article>Perferendis ex quis excepturi dignissimos facilis asperiores, officia magnam totam, eaque, qui cupiditate et mollitia possimus ratione quidem voluptatibus aliquid dolor delectus accusamus nostrum. Ea expedita aspernatur laboriosam, sint nesciunt?</article>
+			</div>
+		</div>
+	</div -->
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-12">
+				<!--div class="micaja">
+					<div class="btn-cont">
+						<button class="btn btn-info" onclick="agregarTexto(this)">Agregar Texto</button>
+						<button class="btn btn-info" onclick="cambiarBack(this)">Cambiar back</button>
+					</div>
+				</div-->
+
+				<div class="micaja2">
+					<div class="btn-cont">
+						<button class="btn btn-info" onclick="agregarTexto1(this)" >
+							Agregar Texto
+						</button>
+						<button class="btn btn-info" onclick="cambiarBack1(this)" >Cambiar back</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="text-center">
+		<button type="button" class="btn btn-info" onclick="caller('tarea')">Agregar A</button>
+		<button type="button" class="btn btn-info" onclick="caller('azul')">Agregar B</button>
+		<button type="button" class="btn btn-danger" onclick="eliminarPrimero()">Eliminar primero</button>
+		<button type="button" class="btn btn-warning" onclick="eliminarUltimo()">Eliminar ultimo</button>
+		<button type="button" class="btn btn-success" onclick="eliminarTodos()">Eliminar todos</button>
+	</div>
+	<div id="aqui" class="text-center">
+		
+	</div>
+
+	<script>
+		
+			
+
+		function anadirElemento(contenedor, texto, clase){
+			var nuevo = document.createElement("p");
+			var texto = document.createTextNode(texto);
+			nuevo.setAttribute("class", clase);
+			nuevo.appendChild(texto);		
+			contenedor.appendChild(nuevo);
+		}
+
+		function caller(clase){
+			var aqui = document.getElementById("aqui");
+			var texto = aqui.children.length + 1
+			anadirElemento(aqui, texto, clase);
+		}
+		function eliminarPrimero(){
+			var aqui = document.getElementById("aqui");
+			var primerNodo = aqui.firstChild;
+			aqui.removeChild(primerNodo);
+		}
+		function eliminarUltimo(){
+			var aqui = document.getElementById("aqui");
+			var ultimoNodo = aqui.lastChild;
+			aqui.removeChild(ultimoNodo);
+		}
+		function eliminarTodos(){
+			var aqui = document.getElementById("aqui");
+			aqui.innerHTML = "";
+		}
+		
+	</script>
+
+	<script type="text/javascript" src="js/caja.js"></script>
+</body>
+</html>

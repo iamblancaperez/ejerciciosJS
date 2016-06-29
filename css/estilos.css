@@ -1,0 +1,36 @@
+.tarea,.azul{
+	width: 80%;
+	margin: 5px auto;
+	padding: 20px;
+	background-color: #D86666;
+	font-size: 24px;
+	color: whitesmoke;
+	border: solid 5px #8C0606;
+}
+.azul{
+	background-color: #5AEBDD;
+	border-color: #2E86A1;
+}
+
+.micaja, .micaja2{
+	width: 200px;
+	height: 200px;
+	background-color: #75AAD5;
+	position: relative;
+}
+.btn-cont{
+	position: absolute;
+	bottom: 0;
+	text-align: center;
+}
+.red{
+	width: 50%;
+	margin: 0 auto;
+	color: whitesmoke;
+	text-align: center;
+	padding: 20px;
+}
+
+.otro{
+	background-color: #987FE5;
+}

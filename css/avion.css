@@ -1,0 +1,14 @@
+.asiento{
+	width: 100px;
+	height: 100px;
+	padding: 10px;
+	line-height: 100px;
+	margin: 5px;
+	display: inline-block;
+}
+.desocupado{
+	background-color: #61D149;
+}
+.ocupado{
+	background-color: #DA1A1A;
+}
