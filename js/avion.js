@@ -40,7 +40,14 @@ for (var i = 0; i < asientos.length; i++) {
 		a.setAttribute("class","desocupado asiento");
 	}
 	
-	a.setAttribute("onclick", "cambiarBack(this)")
+	a.addEventListener('click', function(){
+		if(this.getAttribute("class") == "ocupado asiento"){
+			this.setAttribute("class","desocupado asiento");
+		}else{
+			this.setAttribute("class","ocupado asiento");
+		}
+	});
+
 	if(cajaPeq.children.length >= 2){
 		avionContainer.appendChild(cajaPeq);
 		cajaPeq = document.createElement("div");
@@ -54,10 +61,3 @@ for (var i = 0; i < asientos.length; i++) {
 	}
 }
 
-function cambiarBack(elemento){
-	if(elemento.getAttribute("class") == "ocupado asiento"){
-		elemento.setAttribute("class","desocupado asiento");
-	}else{
-		elemento.setAttribute("class","ocupado asiento");
-	}
-}
